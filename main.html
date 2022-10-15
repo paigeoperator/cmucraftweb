@@ -1,0 +1,75 @@
+<head><title>cmucraft.com</title><link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/minecraftia" type="text/css"/><link rel="icon" type="image/x-icon" href="favicon.ico"><link href="http://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet"><link rel="stylesheet" href="shine.css"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    /* Center the loader */
+    #loader {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 1;
+      width: 20px;
+      height: 20px;
+      margin: 0px 0 0 0px;
+      border: 5px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 5px solid #db8734;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+    }
+    
+    @-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* Add animation to "page content" */
+    .animate-bottom {
+      position: relative;
+      -webkit-animation-name: animatebottom;
+      -webkit-animation-duration: 1s;
+      animation-name: animatebottom;
+      animation-duration: 1s
+    }
+    
+    @-webkit-keyframes animatebottom {
+      from { bottom:0px; opacity:0 } 
+      to { bottom:0px; opacity:1 }
+    }
+    
+    @keyframes animatebottom { 
+      from{ bottom:0px; opacity:0 } 
+      to{ bottom:0; opacity:1 }
+    }
+    
+    #myDiv {
+      display: none;
+      text-align: center;
+    }
+    </style></head>
+<body onload="myFunction()" style="margin:0;"><div id="loader"></div><div style="position: fixed;left: 50%;top: 40%;transform: translate(-50%, -50%);" id="myDiv" class="animate-bottom">
+    <img src="https://opengameart.org/sites/default/files/sqrl_5frames_2.gif" style="width:200px;display: block;
+    margin-left: auto;margin-right: auto;margin-top:-120px;margin-bottom:-30px">
+    <div class="text"><h1 style="text-align:center">cmucraft.com</h1></div>
+    <hr>
+    <p>- Private java edition survival server for Central Michigan students!</p>
+    <p>- Connect to <b>cmucraft.com</b> from the CMICH WiFi to join from anywhere.</p>
+    <p>- Level up by mining ores, killing mobs, and more!</p>
+    <p></p>
+    <hr>
+    <script>
+        var myVar;
+        
+        function myFunction() {
+          myVar = setTimeout(showPage, 3000);
+        }
+        
+        function showPage() {
+          document.getElementById("loader").style.display = "none";
+          document.getElementById("myDiv").style.display = "block";
+        }
+        </script>
+</div></body>
